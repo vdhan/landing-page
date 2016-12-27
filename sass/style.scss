@@ -1,0 +1,190 @@
+/*
+Landing page
+Copyright (C) 2016 Hoàng Ân
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+$md: 20px;
+
+body, html {
+  @extend %h-full;
+}
+
+.m-t-md {
+  margin-top: $md;
+}
+
+.p-t-md {
+  padding-top: $md;
+}
+
+.bd {
+  border: 1px solid;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.parallax {
+  background-image: url("../img/parallax.jpg");
+  background-size: cover;
+  @extend %h-full;
+}
+
+%center {
+  margin: auto;
+}
+
+%h-full {
+  height: 100%;
+}
+
+.panorama {
+  width: 64vw;
+  height: 36vw;
+  @extend %center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 34; // due to Slippry has z-index 33
+  padding-top: 100px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  @extend %h-full;
+}
+
+.modal-content {
+  display: block;
+  width: 80%;
+  max-width: 700px;
+
+  animation-name: zoom;
+  animation-duration: .6s;
+  @extend %center;
+}
+
+.modal-caption {
+  text-align: center;
+  color: #ccc;
+  padding-top: 10px;
+  @extend .modal-content;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+
+  &:hover, &:focus {
+    color: #bbb;
+    cursor: pointer;
+  }
+}
+
+@mixin heading($size) {
+  font-size: $size;
+  font-weight: bold;
+}
+
+@mixin response($text, $h1: $text + 1.2, $h2: $text + 0.9, $h3: $text + 0.6,
+  $h4: $text + 0.3, $h5: $text - 0.2, $h6: $text - 0.4) {
+  .text-response {
+    font-size: $text;
+
+    h1 {
+      @include heading($h1);
+    }
+
+    h2 {
+      @include heading($h2);
+    }
+
+    h3 {
+      @include heading($h3);
+    }
+
+    h4 {
+      @include heading($h4);
+    }
+
+    h5 {
+      @include heading($h5);
+    }
+
+    h6 {
+      @include heading($h6);
+    }
+  }
+
+  h1.text-response {
+    @include heading($h1);
+  }
+
+  h2.text-response {
+    @include heading($h2);
+  }
+
+  h3.text-response {
+    @include heading($h3);
+  }
+
+  h4.text-response {
+    @include heading($h4);
+  }
+
+  h5.text-response {
+    @include heading($h5);
+  }
+
+  h6.text-response {
+    @include heading($h6);
+  }
+}
+
+@media (max-width: 479px) {
+  @include response(3.4vw);
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  @include response(2.6vw);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  @include response(2vw);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  @include response(1.6vw);
+}
+
+@media (min-width: 1200px) {
+  @include response(1.4vw);
+}

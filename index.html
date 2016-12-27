@@ -1,0 +1,85 @@
+<!--
+Landing page
+Copyright (C) 2016 Hoàng Ân
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Hoàng Ân">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing page</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/slippry.css">
+    <link rel="stylesheet" href="css/pannellum.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/rellax.min.js"></script>
+    <script src="js/slippry.min.js"></script>
+    <script src="js/pannellum.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <div class="parallax rellax" data-rellax-speed="-4"></div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" src="img/black_hole.jpg">
+      <div class="modal-caption">Black Hole</div>
+    </div>
+
+    <div class="bg-white rellax p-t-md" data-rellax-speed="0">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-offset-3 col-xs-6">
+            <ul id="slippry">
+              <li>
+                <img src="img/i1.jpg" alt="Welcome to carousel!">
+              </li>
+
+              <li>
+                <a href="#"><img src="img/i2.jpg"  alt="You will ♥ it :)"></a>
+              </li>
+
+              <li>
+                <img src="img/i3.jpg" alt="">
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row m-t-md">
+          <div id="demo" class="panorama"></div>
+        </div>
+
+        <div class="row m-t-md">
+          <div id="world" class="panorama"></div>
+        </div>
+      </div>
+
+      <div class="m-t-md">
+        <p class="text-primary text-center">
+          <strong>Copyright &copy; <script>getYear(2016);</script>, Hoàng Ân</strong>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

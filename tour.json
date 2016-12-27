@@ -1,0 +1,53 @@
+{
+  "default": {
+    "author": "An",
+    "firstScene": "universe",
+    "sceneFadeDuration": 2000
+  },
+
+  "scenes": {
+    "universe": {
+      "type": "cubemap",
+      "cubeMap": [
+        "universe1.png",
+        "universe2.png",
+        "universe3.png",
+        "universe4.png",
+        "universe5.png",
+        "universe6.png"
+      ],
+      "basePath": "img/",
+      "title": "Panorama demo",
+      "compass": true,
+      "autoLoad": true,
+      "hotSpots": [
+        {
+          "yaw": -85,
+          "pitch": 0,
+          "type": "scene",
+          "text": "Pull In",
+          "sceneId": "blackHole",
+          "targetPitch": -90
+        }
+      ]
+    },
+
+    "blackHole": {
+      "type": "equirectangular",
+      "panorama": "black_hole.jpg",
+      "basePath": "img/",
+      "title": "Panorama demo",
+      "compass": true,
+      "autoLoad": true,
+      "hotSpots": [
+        {
+          "yaw": 0,
+          "pitch": 90,
+          "type": "scene",
+          "text": "Push Out",
+          "sceneId": "universe"
+        }
+      ]
+    }
+  }
+}

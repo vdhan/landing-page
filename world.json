@@ -1,0 +1,20 @@
+{
+  "type": "equirectangular",
+  "panorama": "world.jpg",
+  "basePath": "img/",
+  "title": "World",
+  "author": "An",
+  "compass": true,
+  "autoLoad": true,
+  "autoRotate": 5,
+  "autoRotateInactivityDelay": 3000,
+  "hotSpots": [
+    {
+      "yaw": 105,
+      "pitch": -15,
+      "type": "info",
+      "text": "Việt Nam",
+      "URL": "#"
+    }
+  ]
+}
